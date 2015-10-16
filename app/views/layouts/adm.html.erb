@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Admin</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<section class="container">
+  <!-- menu kiri -->
+  <section class="col-lg-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Menu</h3>
+      </div>
+      <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+          <li role="presentation" id="pill_articles">
+            <a href="/adm/articles">Articles</a>
+          </li>
+          <li role="presentation" id="pill_users">
+            <a href="/adm/users">Users</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- main -->
+  <section class="col-lg-9">
+    <%= yield %>
+  </section>
+</section>
+</body>
+</html>
