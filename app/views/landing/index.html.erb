@@ -1,0 +1,24 @@
+<div class="container">
+  <%= render partial: 'header' %>
+  <%= render partial: 'nav' %>
+
+  <div class="col-lg-9">
+
+    <% @articles.each do |article| %>
+        <div>
+          <h4><%= article.title %></h4>
+          <article><%= article.body %></article>
+          <hr>
+        </div>
+    <% end %>
+
+    <%= will_paginate @articles %>
+  </div>
+
+  <div class="col-lg-3">
+    <%= render partial: 'widget/side' %>
+  </div>
+
+  <%= render partial: 'widget/footer' %>
+
+</div>

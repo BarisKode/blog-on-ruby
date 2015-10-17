@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BlogOnRuby</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>Blog Using Ruby on Rails</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div><%= notice %></div>
+<div><%= alert %></div>
 
 <%= yield %>
 
